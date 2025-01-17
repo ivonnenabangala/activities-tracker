@@ -1,12 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <div class="body">
+        <div class="add-icon">
+            <button id="goToForm">
+
+                <img src="./images/add-ellipse-svgrepo-com.png" alt="" >
+            </button>
+            
+        </div>
+        <div class="image">
+            <img src="./images/tracker.jpg" alt="tracker image">
+            <div class="text">
+                <h5>Welcome to My Streak Counter</h5>
+            </div>
+        </div>
+
+    </div>
+    <div class="body body-form">
+        <div class="remove-icon">
+            <button>
+
+                <img src="./images/cancel-svgrepo-com.png" alt="cancel">
+            </button>
+        </div>
+        <div class="image">
+            <img src="./images/tracker.jpg" alt="tracker image">
+            <div class="form">
+                <form action="submit" id="activityForm">
+                    <div class="form-title">
+                        <p>Please add a task</p>
+                    </div>
+                    <label for="name">Task name</label> <br>
+                    <input type="text" id="activityName" required> <br>
+                    <label for="image">Image URL</label> <br>
+                    <input type="text" id="activityImg" required> <br>
+                    <label for="date">Start date</label> <br>
+                    <input type="date" id="activityDate" required> <br>
+                    <button>Add task</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <h2 class="activities-title">Activities</h2>
+    <div class="cards" id="cards">
+        
+    </div>
+    <div class="popupCard" id="popUpCard">
+        
+    </div>
     <script defer src="script.js"></script>
 </body>
+
 </html>
