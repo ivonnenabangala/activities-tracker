@@ -11,29 +11,33 @@
 <body>
     <div class="body">
         <div class="add-icon">
-            <button id="goToForm">
+            <button id="goToForm" class="icon-button">
 
-                <img src="./images/add-ellipse-svgrepo-com.png" alt="" >
+                <img src="./images/add-svgrepo-com.png" alt="" >
             </button>
             
         </div>
         <div class="image">
             <img src="./images/tracker.jpg" alt="tracker image">
             <div class="text">
-                <h5>Welcome to My Streak Counter</h5>
+                <h2>Welcome to My Streak Counter</h2>
             </div>
         </div>
 
     </div>
     <div class="body body-form">
         <div class="remove-icon">
-            <button>
+            <button class="icon-button">
 
-                <img src="./images/cancel-svgrepo-com.png" alt="cancel">
+                <img src="./images/close-svgrepo-com.png" alt="cancel">
             </button>
         </div>
-        <div class="image">
-            <img src="./images/tracker.jpg" alt="tracker image">
+        <div class="image form-img">
+            <div>
+
+                <img src="./images/hamburger-menu-svgrepo-com.png" alt="tracker image">
+                <p>Add new tasks</p>
+            </div>
             <div class="form">
                 <form action="submit" id="activityForm">
                     <div class="form-title">
@@ -45,8 +49,9 @@
                     <input type="text" id="activityImg" required> <br>
                     <label for="date">Start date</label> <br>
                     <input type="date" id="activityDate" required> <br>
-                    <button>Add task</button>
+                    <button onclick="showMessage()">Add task</button>
                 </form>
+                <p id="successMessage" style="display: none; color: green;">Task added successfully!</p>
             </div>
         </div>
 

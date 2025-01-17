@@ -1,6 +1,8 @@
 let activities = []
 
 let activityId = 1
+let container = document.getElementById("cards");
+
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("goToForm").addEventListener("click", function () {
         document.querySelector(".body").style.display = "none";
@@ -23,12 +25,14 @@ form.onsubmit = (event) => {
     const image = document.getElementById("activityImg").value
     const date = document.getElementById("activityDate").value
 
-    console.log(
-        name,
-        image,
-        date
-    )
+    if (name && image && date) {
+        const successMessage = document.getElementById("successMessage");
+        successMessage.style.display = "block";
 
+        setTimeout(() => {
+            successMessage.style.display = "none";
+        }, 5000);
+    }
     const myActivity = {
         id: activityId++,
         name: name,
@@ -43,7 +47,6 @@ form.onsubmit = (event) => {
 }
 
 const displayActivity = () => {
-    let container = document.getElementById("cards");
     container.innerHTML = "";
     for (let activity of activities) {
         const activityDate = new Date(activity.date);
@@ -79,8 +82,8 @@ const displayActivity = () => {
         container.appendChild(containerCard);
     }
 };
-const openPopUp = () => {
-    
+const showMessage = () => {
+    setTimeout()
 }
 
 const deleteActivity = (id) => {
@@ -88,8 +91,17 @@ const deleteActivity = (id) => {
         return myActivity.id
     }).indexOf(id)
     activities.splice(index, 1)
-    displayActivity()
+    checkActivities()
 }
 
 
 const closePopUp = () => document.querySelector(".popupCard").style.display = "none";
+
+function checkActivities() {
+    if(activities.length === 0){
+        container.innerHTML = `<p>No activities added yet</p>`
+    } else {
+        displayActivity()
+    }
+}
+checkActivities()
