@@ -89,10 +89,14 @@ body{
 .close-btn{
     background-color: orangered;
     color: white;
+    width: 100px;
+    border: none;
 }
 .delete-btn{
     background-color: grey;
     color: white;
+    width: 100px;
+    border: none;
 }
 .icon-button{
     background-color: orangered;

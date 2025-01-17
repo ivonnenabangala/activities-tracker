@@ -1,3 +1,6 @@
+const today = new Date().toISOString().split("T")[0]; 
+document.getElementById("activityDate").setAttribute("max", today);
+
 let activities = []
 
 let activityId = 1
